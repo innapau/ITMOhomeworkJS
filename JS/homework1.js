@@ -83,22 +83,22 @@ alert(`Ближайшее число к 10: ${closest}`);
 //          Задача #5
 
 //Вершина A
-let ax = prompt('Задача 5. Указиже координату X точки A');
-let ay = prompt('Задача 5. Указиже координату Y точки A');
-let az = prompt('Задача 5. Указиже координату Z точки A');
+let ax = prompt('Задача 5. Укажите координату X точки A');
+let ay = prompt('Задача 5. Укажите координату Y точки A');
+let az = prompt('Задача 5. Укажите координату Z точки A');
 
 //Вершина B
-let bx = prompt('Задача 5. Указиже координату X точки B');
-let by = prompt('Задача 5. Указиже координату Y точки B');
-let bz = prompt('Задача 5. Указиже координату Z точки B');
+let bx = prompt('Задача 5. Укажите координату X точки B');
+let by = prompt('Задача 5. Укажите координату Y точки B');
+let bz = prompt('Задача 5. Укажите координату Z точки B');
 
 //Вершина C
 let cx = prompt('Задача 5. Указиже координату X точки C');
-let cy = prompt('Задача 5. Указиже координату Y точки C');
-let cz = prompt('Задача 5. Указиже координату Z точки C');
+let cy = prompt('Задача 5. Укажите координату Y точки C');
+let cz = prompt('Задача 5. Укажите координату Z точки C');
 
 const lineSegment = (x1, y1, z1, x2, y2, z2) => {
-  return Math.sqrt((Math.abs(x2 - x1) ** 2) + (Math.abs(y2 - y1) ** 2) + (Math.abs(z2 - z1) ** 2));
+  return (x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2;
 }
 
 const AB = lineSegment(parseInt(ax), parseInt(ay), parseInt(az), parseInt(bx), parseInt(by), parseInt(bz));
@@ -108,10 +108,10 @@ const BC = lineSegment(parseInt(bx), parseInt(by), parseInt(bz), parseInt(cx), p
 console.log(AB, AC, BC);
 
 const answer5 = (segmentA, segmentB, segmentC) => {
-  return ((segmentA ** 2) === (segmentB ** 2) + (segmentC ** 2)) ? true :
-  ((segmentB ** 2) === (segmentA ** 2) + (segmentC ** 2)) ? true :
-  ((segmentC ** 2) === (segmentA ** 2) + (segmentB ** 2)) ? true : false;
+  return (segmentA === segmentB + segmentC) ? true :
+  (segmentB === segmentA + segmentC) ? true :
+  (segmentC === segmentA + segmentB) ? true : false;
 }
 
-console.log(`Треугольник явзяется прямоугольным: ${answer5(AB, AC, BC)}`);
-alert(`Треугольник явзяется прямоугольным: ${answer5(AB, AC, BC)}`);
+console.log(`Треугольник является прямоугольным: ${answer5(AB, AC, BC)}`);
+alert(`Треугольник является прямоугольным: ${answer5(AB, AC, BC)}`);
