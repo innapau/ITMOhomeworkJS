@@ -142,7 +142,7 @@ for (let i = plates, j = cleanser; i >= 0 && j >= 0; i-- , j -= 0.5) {
   let result = ``;
   if (i === 0) {
     result = `${j} мл моющего средства осталось после мыться всех тарелок`;
-  } else if (j === 0) {
+  } else if (j >= 0 && j < 0.5) {
     result = `${i} тарелок осталось, когда кончилось моющее средство`;
   }
   console.log(result);
