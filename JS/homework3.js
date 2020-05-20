@@ -94,3 +94,24 @@ for (let i = 1000; i < 1000000; i++) {
   }
 };
 console.log(luckyTicketCount);
+
+//         Задача #4 "Аннигилируй это"
+
+
+let weights = [2, 7, 4, 1, 8, 1];
+
+function getMaxNum(arr) {
+  return Math.max(...arr);
+};
+console.log(`Наиболшее из массива: ${getMaxNum(weights)}`);
+
+function annihilation(arr) {
+  let result = 0;
+  let max1 = arr[0];
+  let max2 = arr[0];
+  let resArr1 = [];
+  let resArr2 = [];
+
+  return result;
+};
+console.log(annihilation(weights));

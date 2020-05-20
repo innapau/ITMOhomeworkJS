@@ -66,3 +66,17 @@ function passwordCheck(pwd) {
 console.log(passwordCheck(userPass));
 
 //         Задача #4
+
+
+// let dictionary = 'Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье';
+//
+// const strToArray = (str) => str.split(' ');
+// console.log(strToArray(dictionary));
+//
+// function fuzzySearch(word, arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < word.length; j++) {
+//
+//     }
+//   }
+// };
