@@ -107,10 +107,14 @@ console.log(`Наиболшее из массива: ${getMaxNum(weights)}`);
 
 function annihilation(arr) {
   let result = 0;
-  let max1 = arr[0];
-  let max2 = arr[0];
-  let resArr1 = [];
-  let resArr2 = [];
+  let resultArr = [];
+  let max1 = 0;
+  let max2 = 0;
+  if (max1 === 0) {
+    max1 = getMaxNum(arr);
+    resultArr =
+  }
+
 
   return result;
 };

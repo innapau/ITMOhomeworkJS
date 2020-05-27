@@ -24,12 +24,13 @@ console.log(foo(a, 'count', 10));
 function randomNumberGenerator(min, max) {
   let result = 0;
   let numbers = [];
+  let counter = 0;
 
   return function() {
     if (numbers.length === max) {
       return alert('Невозможно сгенерировать более 100 чисел');
     }
-    for (let i = 0; i < max; i++) {
+    while (counter < max) {
       let found = false;
       result = Math.floor(Math.random() * Math.floor(max - min + 1) + min);
       for (let j = 0; j < numbers.length; j++) {
