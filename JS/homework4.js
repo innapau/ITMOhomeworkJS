@@ -66,3 +66,26 @@ function passwordCheck(pwd) {
 console.log(passwordCheck(userPass));
 
 //         Задача #4
+
+
+let dictionary = 'Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье';
+let userWord = 'Срида';
+//prompt('Введите слово для поиска в словаре:')
+
+const strToArray = (str) => str.split(' ');
+const dictionaryArr = strToArray(dictionary);
+console.log(dictionaryArr);
+
+function fuzzySearch(word, arr) {
+    let regStr = '';
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < word.length; j++) {
+
+            console.log(regStr);
+        }
+    }
+};
+
+// let reg = new RegExp('^' + (word - word[j]) + '.$', 'ig');
+// console.log(reg);
+console.log(fuzzySearch(userWord, dictionaryArr))
