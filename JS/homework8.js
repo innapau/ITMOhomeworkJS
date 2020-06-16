@@ -187,5 +187,3 @@ function tableBooks(arr) {
     tagBooks.appendChild(table);
 };
 tableBooks(books);
-
-//         Задача #5
