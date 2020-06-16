@@ -76,7 +76,6 @@ function commentComposer() {
     if (text !== '') {
         // Добавляем коммент
         container.classList.add('comment');
-        section.appendChild(container);
 
         //Добавляем аватар
         pic.classList.add('picture-container');
@@ -102,6 +101,8 @@ function commentComposer() {
         textBlock.classList.add('comment-text');
         textBlock.innerHTML = text;
         rightSection.appendChild(textBlock);
+
+        section.appendChild(container);
     } else {
         alert('Введите текст комментария');
     }
